@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>this is add vihicle</h1>
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+<div class="mb-3">
+  <div class="border p-4">
+  <label  class="form-label">Model Name</label>
+  <input type="text" class="form-control" name="m" placeholder="Enter Movie Title">
+</div>
+
+<div class="mb-3">
+  <div class="border p-4">
+  <label  class="form-label">Fuel type</label>
+  <input type="text" class="form-control" name="f" placeholder="Enter Director's Name">
+</div>
+
+    <div class="mb-3">
+  <div class="border p-4">
+  <label  class="form-label">Color</label>
+  <input type="text" class="form-control" name="c" placeholder="Enter Director's Name">
+</div>
+
+
+<div class="mb-3">
+  <div class="border p-4">
+  <label  class="form-label">number</label>
+  <input type="number" class="form-control" name="n" placeholder="Enter Movie Genre">
+</div>
+
+
+<div class="mb-3">
+  <div class="border p-4">
+    <input type="submit" class="black-button">
+</div>
+
+</div>
+
+  </form>
+
+
+
+
+</body>
+</html>

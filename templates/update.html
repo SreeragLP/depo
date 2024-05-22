@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<h1>this is update</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <table>
+        {{f.as_table}}
+
+    </table>
+
+    <input type="submit" class="black-button">
+</form>
+
+
+</body>
+</html>
