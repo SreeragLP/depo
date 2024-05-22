@@ -2,52 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container .form-control {
+            height: calc(1.5em + .75rem + 2px);
+        }
+        .form-container .btn {
+            height: calc(2em + .75rem + 2px);
+        }
+    </style>
 </head>
-<body>
+<body class="bg-light">
 
-<h1>this is add vihicle</h1>
+<div class="container mt-5">
+    <div class="form-container">
+        <h1 class="text-center mb-4">Add Vehicle</h1>
 
-<form method="POST" enctype="multipart/form-data">
-  {% csrf_token %}
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
 
-<div class="mb-3">
-  <div class="border p-4">
-  <label  class="form-label">Model Name</label>
-  <input type="text" class="form-control" name="m" placeholder="Enter Movie Title">
+            <div class="mb-3">
+                <label class="form-label">Model Name</label>
+                <input type="text" class="form-control" name="m" placeholder="Enter Model Name">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Fuel Type</label>
+                <input type="text" class="form-control" name="f" placeholder="Enter Fuel Type">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Color</label>
+                <input type="text" class="form-control" name="c" placeholder="Enter Color">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Number</label>
+                <input type="number" class="form-control" name="n" placeholder="Enter Number">
+            </div>
+
+            <div class="d-grid">
+                <input type="submit" class="btn btn-primary btn-sm" value="Submit">
+            </div>
+        </form>
+    </div>
 </div>
 
-<div class="mb-3">
-  <div class="border p-4">
-  <label  class="form-label">Fuel type</label>
-  <input type="text" class="form-control" name="f" placeholder="Enter Director's Name">
-</div>
-
-    <div class="mb-3">
-  <div class="border p-4">
-  <label  class="form-label">Color</label>
-  <input type="text" class="form-control" name="c" placeholder="Enter Director's Name">
-</div>
-
-
-<div class="mb-3">
-  <div class="border p-4">
-  <label  class="form-label">number</label>
-  <input type="number" class="form-control" name="n" placeholder="Enter Movie Genre">
-</div>
-
-
-<div class="mb-3">
-  <div class="border p-4">
-    <input type="submit" class="black-button">
-</div>
-
-</div>
-
-  </form>
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
 </html>
