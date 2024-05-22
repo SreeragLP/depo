@@ -1,10 +1,16 @@
 {
-    "builds": [{
-        "src": "vihicle/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" },
-        "buildCommand" : "./install.sh"
-    }],
+    "builds": [
+        {
+            "src": "build.sh",
+            "use": "@vercel/static-build",
+            "config": {}
+        },
+        {
+            "src": "vihicle/wsgi.py",
+            "use": "@vercel/python",
+            "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+        }
+    ],
     "routes": [
         {
             "src": "/(.*)",
