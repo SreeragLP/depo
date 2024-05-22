@@ -1,10 +1,11 @@
-#!/bin/bash
+apt-get update && apt-get install -y libmysqlclient-dev
 
-# Ensure Python and pip are available
-python3 -m ensurepip --upgrade
 
-# Upgrade pip
-python3 -m pip install --upgrade pip
+pip install -r requirements.txt
 
-# Install dependencies
-python3 -m pip install -r requirements.txt
+
+# Run database migrations
+python3 manage.py migrate
+
+# Collect static files
+python3 manage.py collectstatic --noinput
